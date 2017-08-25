@@ -4,9 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    
+    @*<link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />*@
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />*@
     @RenderSection("header", false);
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @System.Web.Optimization.Styles.Render("~/CFS/css")
+ 
+  
 </head>
 <body>
  
@@ -35,8 +40,15 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+  
     @RenderSection("scripts", required: false)
+    @System.Web.Optimization.Scripts.Render("~/CFS/base")
+
+    @*<script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <script src="~/Scripts/MyEditorJS.js"></script>*@
+  
 </body>
+
 </html>

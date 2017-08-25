@@ -14,14 +14,10 @@
         $this.init = function () {
             initBook();
         }
-
-        $(function () {
-
-            var self = new HomeIndex();
-            self.init();
-        })
-
     }
+    $(function () {
+        var self = new HomeIndex();
+        self.init();
+    })
 
-
-}(JQuery))
+}(jQuery));

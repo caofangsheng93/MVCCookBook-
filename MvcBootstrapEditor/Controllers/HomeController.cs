@@ -16,7 +16,7 @@ namespace MvcBootstrapEditor.Controllers
             BookModel book = new BookModel();
             return View();
         }
-
+         [ValidateInput(false)]   //谷歌浏览器可以不用加这一行。
         [HttpPost]
         public ActionResult Index(BookModel model)
         {
