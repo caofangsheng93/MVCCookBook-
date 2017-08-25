@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MVCAjaxForm.Models.UserModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">User List</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <a id="addUser" href="@Url.Action("AddUser","Home")" class="btn btn-primary"><i>Add User</i></a>
+        </div>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserName</td>
+                <td>@item.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
