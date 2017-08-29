@@ -58,7 +58,6 @@
                     debugger;
                     var studentList = $.parseJSON(data.d);
                     $.each(studentList, function (id, student) {
-
                         var template = $("#tempStudent").html();
                         var html = Mustache.render(template, student);
                         tableBody.append(html);
@@ -77,13 +76,13 @@
     </script>
     <!--模板-->
     <script type="text/template" id="tempStudent">
-        {{#Registered}}      
+       <%-- {{#Registered}}      --%>
         <tr>
             <td>{{StudentId}}</td>
             <td>{{Name}}</td>
             <td>{{Registered}}</td>
         </tr>
-        {{/Registered}}
+       <%-- {{/Registered}}--%>
     </script>
 </head>
 <body>
