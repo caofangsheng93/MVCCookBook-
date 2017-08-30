@@ -1,0 +1,54 @@
+﻿@model MustacheMVC.Models.PublisherModel
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/Scripts/mustache.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ID").change(function () {
+            var id = $("#ID").val();    //获取选中的出版商ID
+            var mybooksDIv = $("#booksDiv");
+            $.ajax({
+                url: "@Url.RouteUrl("BooksByPublisherId")",
+                data: { "id": id },
+                type: "get",
+                success: function (data) {
+                    debugger;
+                    mybooksDIv.html('');
+                    $.each(data, function (index, book) {
+                        var template = $("#tempBook").html();
+                        var bookData = Mustache.render(template, book);
+                        mybooksDIv.append(bookData);
+
+                    });
+                },
+                error: function (result) {
+                    debugger;
+                    alert("Error");
+
+                }
+
+
+
+            });
+
+
+
+        })
+
+
+    });
+
+</script>
+<!--模板-->
+<script type="text/template" id="tempBook">
+      <b>Title:</b>{{Title}}<br />
+      <b>Author:</b>{{Author}}<br />
+      <b>Year:</b>{{Year}}<br />
+      <b>Price:</b>{{Price}}<br />
+</script>
+<div>
+    @Html.LabelFor(model=>model.ID)
+    @Html.DropDownListFor(model=>model.ID,Model.PublishList)
+</div>
+<div id="booksDiv"></div>
+
+

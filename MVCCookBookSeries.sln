@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcBootstrapEditor", "MvcBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MustacheWebForm", "MustacheWebForm\MustacheWebForm.csproj", "{4D044844-A5C3-432B-B9E6-5799BB8D49B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MustacheMVC", "MustacheMVC\MustacheMVC.csproj", "{EF127E43-AADF-4447-9DF9-AE171473957D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4D044844-A5C3-432B-B9E6-5799BB8D49B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D044844-A5C3-432B-B9E6-5799BB8D49B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D044844-A5C3-432B-B9E6-5799BB8D49B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF127E43-AADF-4447-9DF9-AE171473957D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF127E43-AADF-4447-9DF9-AE171473957D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF127E43-AADF-4447-9DF9-AE171473957D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF127E43-AADF-4447-9DF9-AE171473957D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
